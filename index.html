@@ -7,314 +7,206 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
 
-    <title>things that i (we) heard</title>
+    <title>things that i (we) heard in ___</title>
     <meta name="author" content="Sarah Marshall & ∧° ┐">
     <meta name="reply-to" content="we.are.pe.hu&#64;gmail.com">
     <meta name="description" content="私（わたしたち）が聞いた言葉">
+
+    <meta property="og:title" content="things that i (we) heard in ___" />
+    <meta property="og:description" content="私（わたしたち）が聞いた言葉" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://creative-community.space/map/heard/" />
+    <meta property="og:site_name" content="creative-community.space" />
+    <meta property="og:image" content="card.png" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@NLC_update" />
+    <meta name="twitter:image" content="card.png" />
+
     <link rel="icon" href="card.png">
     <link rel="apple-touch-icon" href="card.png">
+    <link href='heard.css' rel='stylesheet' />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/2.6.1/mapbox-gl.js'></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-color: #CDCBCC;
-            color: #fff;
         }
         
-        main {
-            font-family: 'Libre Baskerville', "YuMincho", "Yu Mincho", "游明朝体", serif;
-            width: 95%;
-            max-width: 950px;
-            margin: 2.5rem auto;
-            padding: 0;
-            font-size: 1.1rem;
-        }
-        
-        main h1 {
-            font-style: italic;
-            line-height: 150%;
-            padding: 2.5% 0;
-        }
-        
-        main h1,
-        ruby {
-            width: 90%;
-            margin: auto;
-        }
-        
-        main h2 {
-            display: inline;
-            font-size: 100%;
-            padding-left: 0.5rem;
-            font-weight: normal;
-        }
-        
-        main h3 {
-            font-size: 150%;
-            border: 0;
-            font-weight: normal;
-        }
-        
-        main hr {
-            border: none;
-            padding: 1rem;
-        }
-        
-        main a {
-            color: #fff;
-            text-decoration: underline dotted #fff;
-            font-size: 125%;
-            margin: 0 0.25rem;
-            word-break: break-all;
-            transition: all 1000ms ease;
-        }
-        
-        main u {
-            margin-top: 1rem;
-            display: inline-block;
-            padding-left: 0.3rem;
-            text-decoration: none;
-            background-color: #fff;
-            color: #CDCBCC;
-        }
-        
-        ruby {
-            position: relative;
-            display: block;
-            line-height: 175%;
-            padding: 0.75rem 0;
-        }
-        
-        [data-ruby]::before {
-            content: attr(data-ruby);
-            color: #000;
+        #map {
             position: absolute;
-            z-index: -1;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100vh;
+        }
+        
+        #box {
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 1;
+            pointer-events: all;
+            user-select: text;
+            color: #fff;
+        }
+        
+        #btn {
+            color: #fff;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 10vw;
+            transition: all 1s ease-out;
+            font-weight: 100;
+            width: 85%;
+            overflow: hidden;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        #btn:hover {
+            cursor: pointer;
+        }
+        
+        #box.none {
             pointer-events: none;
             user-select: none;
-            margin-top: -1rem;
-            font-size: 75%;
-            line-height: 245%;
+            font-style: italic;
         }
         
-        details {
-            transition: all 1000ms ease;
-            letter-spacing: 0.25rem;
-        }
-        
-        details summary {
-            cursor: pointer;
-            padding: 0.5rem 1rem;
-            transition: all 1000ms ease;
-            position: relative;
-        }
-        
-        main a:hover,
-        details summary:hover,
-        details[open] summary {
-            transition: all 500ms ease;
-            background-color: #fff;
-            color: #CDCBCC;
-        }
-        
-        details[open] summary:hover {
-            transition: all 500ms ease;
-        }
-        
-        details .content {
-            padding: 1.25rem;
-            position: relative;
-            font-size: 1rem;
-        }
-        
-        #content a {
-            color: black;
-            border-bottom: 1px dashed #000;
-            text-decoration: none;
-            transition: all 1500ms ease;
-        }
-        
-        #content a:hover {
-            background: #fffbe6;
-        }
-        
-        .link {
-            position: fixed;
-            bottom: 0;
+        .none #btn {
+            font-size: 2rem;
+            position: absolute;
+            margin: 0;
+            padding: 1rem 2.5%;
+            top: 0;
             left: 0;
-            font-size: 2.5rem;
-            margin: 1rem 2.5%;
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
         }
         
-        .link a {
+        .cc {
+            font-family: "ipag", monospace;
+            transform: scale(1, 1.25);
+        }
+        
+        #top_btn {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            margin: 1.25rem 0.75rem;
+            font-size: 1.5rem;
+        }
+        
+        #top_btn a {
+            display: block;
+            text-align: center;
+            width: 2rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            color: #CDCBCC;
+            border: solid 2px #fff;
+            border-radius: 50%;
+            background-color: #fff;
+            cursor: pointer;
             text-decoration: none;
-            color: #fff;
+            transition: all 1000ms ease;
         }
         
-        @media screen and (max-width: 750px) {
-            [data-ruby]::before {
-                content: attr(data-ruby);
-                margin-top: -2.25rem;
+        #top_btn a:hover {
+            color: #fff;
+            background-color: #CDCBCC;
+            border: solid 2px #fff;
+            cursor: pointer;
+        }
+        
+        @media screen and (max-width: 920px) {
+            #btn {
+                font-size: 10vw;
+                width: 90%;
+            }
+        }
+        
+        @media screen and (max-width: 550px) {
+            #btn {
+                font-size: 3.5rem;
+                width: 90%;
+            }
+            .none #btn {
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <main id="main">
-        <h1>things that i (we) heard</h1>
-        <ruby data-ruby="こんにちは！サラ・マーシャル">
-            Hello <a href="http://www.marshallsarah.com/things-that-i-heard-in-new-york" target="_blank">Sarah Marshall</a>,
-        </ruby>
-        <ruby data-ruby="私たちは、あなたを真似て、私たちの周りで聞いた言葉を集め始めました。">
-            We've started imitating your idea and collect the things that we heard around us. 
-        </ruby>
-        <ruby data-ruby="言葉を集め始めてから、以前より外へ出ることが楽しくなったように感じます。">
-            Since collecting the words, We feel that Go Out has become more fun than past.
-        </ruby>
-        <ruby data-ruby="これからも新しい生活を楽しむために言葉集めを続けようと思っています。">
-            We will continue to collect the things that we heard to enjoy new life.
-        </ruby>
-        <ruby data-ruby="遊び心があって、楽しい、ユーモラスな、独自性">
-            Playful, Enjoyable, Humorous, Uniqueness,
-        </ruby>
-        <hr/>
-    </main>
-    <main>
-        <details>
-            <summary>
-                <h2>2022年6月8日(水) 〜 6月20日(月)</h2>
-            </summary>
-            <div class="content">
-                <h3>私（わたしたち）が音ビルの周りで聞いた言葉</h3>
-                <p>大阪市住之江区役所内のギャラリースペースに展示します。</p>
-                <br>
-                <p>
-                    <u>会場</u> 住之江区民ギャラリー
-                    <br>
-                    <u>住所</u>
-                    <a href="https://goo.gl/maps/F48rZxDViq7QrJkz5" target="_blank">大阪府大阪市住之江区御崎３丁目１−１７</a>
-                </p>
-                <br>
-                <u>時間</u><br>
-                <p>月曜日～木曜日　午前9時～午後5時30分<br/> 金曜日　午前9時～午後7時</p>
-                <br>
-            </div>
-            <details>
-                <summary>
-                    <h2>この作品について</h2>
-                </summary>
-                <div class="content">
-                    <h3>私（わたしたち）が音ビルの周りで聞いた言葉</h3>
-                    <hr/><br/>
-                    <p>私（わたしたち）は、2019年の秋から住之江区を拠点として、新しい生活を集めている <a href="https://creative-community.space/pehu/" target="_blank">∧° ┐</a> です。</p>
-                    <p>私（わたしたち）は、知っていることの外へ、わからないところまで出かけることを「Go Out」と名付け、コロナ禍に自転車で、たくさんの場所へ出かけました。
-                        <br/>それらの場所は、あらかじめ決めた目的地ではなく、通ったことのない道を選び続けた先にたどり着いた、初めて訪れた知らない場所です。</p>
-                    <p>この作品は、「Go Out」を行う中で見聞きした言葉を集めた地図のような作品です。
-                        <br/>住之江区全域と大正区・西成区の一部の地図上に、私（わたしたち）が聞いた言葉を展示しています。</p>
-                    <p>ですが、この作品を見ただけでは、一体どこがどこなのかよくわからないと思います。
-                        <br/>こうした理由はとても単純で、この作品にとって言葉を聞いた正確な位置などの情報は、あまり重要ではないからです。</p>
-                    <hr/>
-                    <p>この作品にとって重要なことは、私（わたしたち）が、知っていることの外へ、わからないところまで出かけ、印象に残った言葉を集めたということです。</p>
-                    <p>この作品を見たあなたが、いつもと違う通ったことのない道を選んでみようと思ったり、印象に残った言葉を集めようと思ったりしてくれたら、この作品を作って本当によかったと、私（わたしたち）は、心から嬉しく思います。</p>
-                    <hr/><br/>
-                    <a href="otobuilding/" target="_parent">creative-community.space/map/things/otobuilding/</a>
-                    <br/>
-                </div>
-            </details>
-            <hr/>
-        </details>
-        <details>
-            <summary>
-                <h2>2022年5月3日(火)</h2>
-            </summary>
-            <div class="content">
-                <u>Go Out</u>
-                <h3><a href="https://newlifecollection.com/ca100/1304/p-r-s/" target="_blank">シーサイドコスモ</a></h3>
-                <h3><a href="https://newlifecollection.com/ca100/1305/p-r-s/" target="_blank">南港ポートタウン</a></h3>
-                <p>7つの言葉を集めました。</p>
-            </div>
-        </details>
-        <details>
-            <summary>
-                <h2>2022年4月28日(月)</h2>
-            </summary>
-            <div class="content">
-                <u>Go Out</u>
-                <h3><a href="https://newlifecollection.com/ca100/1288/p-r-s/" target="_blank">平林⇄南港南</a></h3>
-                <p>7つの言葉を集めました。</p>
-            </div>
-        </details>
-        <details>
-            <summary>
-                <h2>2022年2月25日(金)</h2>
-            </summary>
-            <div class="content">
-                <u>Go Out</u>
-                <h3><a href="https://newlifecollection.com/ca100/1299/p-r-s/" target="_blank">住之江区民ギャラリー</a></h3>
-                <p>音ビル周辺で聞いた言葉の展示が決定しました。</p>
-            </div>
-        </details>
-        <details>
-            <summary>
-                <h2>2022年2月18日(金)</h2>
-            </summary>
-            <div class="content">
-                <u>Go Out</u>
-                <h3>新北島</h3>
-                <p>8つの言葉を集めました。</p>
-            </div>
-        </details>
-        <details>
-            <summary>
-                <h2>2022年2月12日(土)</h2>
-            </summary>
-            <div class="content">
-                <u>Go Out</u>
-                <h3>津守 - 大正区 - 岸里</h3>
-                <p>16つの言葉を集めました。</p>
-            </div>
-        </details>
-        <details>
-            <summary>
-                <h2>2022年2月7日(月)</h2>
-            </summary>
-            <div class="content">
-                <u>Go Out</u>
-                <h3><a href="https://newlifecollection.com/ca98/206/p-r-s/" target="_blank">新木津川大橋⇄千本松大橋</a></h3>
-                <p>5つの言葉を集めました。</p>
-                <h3><a href="https://newlifecollection.com/ca98/318/p-r-s/" target="_blank">船町⇄鶴町</a></h3>
-                <p>4つの言葉を集めました。</p>
-            </div>
-        </details>
-        <hr/>
-        <h3>会員限定</h3>
-        <details>
-            <summary>
-                <h2>以下のコンテンツの閲覧には会員登録（無料）が必要です。</h2>
-            </summary>
-            <div class="content">
-                <u>2022年6月6日(月)</u>
-                <h3>私（わたしたち）が聞いた言葉</h3>
-                <p>みんなが聞いた言葉を集める会員限定デジタル地図を制作しました。</p>
-                <h3><a href="https://creative-community.space/members/map/heard/" target="_parent">Members Only</a></h3>
-                <hr/>
-                <div id="membersonly"></div>
-            </div>
-        </details>
-        <p class="link">
-            <a href="#" onclick="window.history.back(); return false;">↩︎</a>
-        </p>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            $(function() {
-                $("#membersonly").load("membersonly.html");
-            })
-        </script>
+    <p id="top_btn"><a class="cc" href="https://creative-community.space/map/heard/in.html">i</a></p>
+    <div id="box">
+        <h1 id="btn">things that i (we) heard in ___</h1>
+    </div>
+    <div id="map"></div>
+    <script>
+        let btn = document.querySelector('#btn');
+        let box = document.querySelector('#box');
+
+        let btnToggleclass = function(el) {
+            el.classList.toggle('none');
+        }
+
+        btn.addEventListener('click', function() {
+            btnToggleclass(box);
+        }, false);
+    </script>
+    <script src='template.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8',
+            center: [135.47306292634534, 34.62458544610712],
+            zoom: 13.5
+        });
+
+        // add markers to map
+        for (const marker of geojson.features) {
+            // create a HTML element for each feature
+            const el = document.createElement('div');
+            el.className = 'marker';
+
+            // make a marker for each feature and add to the map
+            new mapboxgl.Marker(el)
+                .setLngLat(marker.geometry.coordinates)
+                .setPopup(
+                    new mapboxgl.Popup({
+                        offset: 25
+                    }) // add popups
+                    .setHTML(
+                        `<div>
+                        <h3>${marker.properties.title}</h3>
+                        <p class="date">${marker.properties.date}
+                          </br>${marker.properties.address}</p>
+                        </div>`
+                    )
+                )
+                .addTo(map);
+        }
+    </script>
 </body>
 
 </html>

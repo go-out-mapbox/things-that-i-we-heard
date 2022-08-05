@@ -9,9 +9,7 @@ const geojson = {
             properties: {
                 title: '聞いた言葉',
                 date: '日付',
-                address: '住所',
-                link: 'none',
-                url: ''
+                address: '住所'
             }
         },
         {
@@ -23,9 +21,7 @@ const geojson = {
             properties: {
                 title: '聞いた言葉',
                 date: '日付',
-                address: '住所',
-                link: 'none',
-                url: ''
+                address: '住所'
             }
         }
 
