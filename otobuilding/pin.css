@@ -1,0 +1,53 @@
+.marker {
+    background: #fff;
+    background-size: cover;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 1s ease-out;
+}
+
+.mapboxgl-popup {
+    min-width: 25%;
+    filter: invert(90%);
+}
+
+.mapboxgl-popup h3 {
+    font-size: 150%;
+    line-height: 150%;
+    margin: 1rem 1rem 2rem;
+    font-family: 'Libre Baskerville', "YuMincho", "Yu Mincho", "游明朝体", serif;
+}
+
+.mapboxgl-popup p {
+    margin: 1.5rem 1rem 0.5rem;
+}
+
+.mapboxgl-popup a {
+    color: #000;
+    text-decoration: none;
+    border: solid 1px #000;
+    padding: 0.1rem 0.2rem;
+}
+
+.mapboxgl-popup .none {
+    display: none;
+}
+
+.mapboxgl-popup-content {
+    color: #000;
+    text-align: center;
+    font-family: "YuMincho", "Yu Mincho", "游明朝体", serif;
+}
+
+.mapboxgl-popup-close-button {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 920px) {
+    .marker {
+        width: 0.75rem;
+        height: 0.75rem;
+    }
+}
