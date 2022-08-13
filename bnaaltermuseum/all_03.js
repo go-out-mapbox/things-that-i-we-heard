@@ -83,6 +83,18 @@ const geojson = {
                 date: '2022-07-25  12:21',
                 address: 'ブーブーパーク'
             }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76828078144308,35.00375576142723]
+            },
+            properties: {
+                title: 'It is in a house? NO',
+                date: '2022-08-13  10:25',
+                address: '京都河原町駅'
+            }
         }
     ]
 };
