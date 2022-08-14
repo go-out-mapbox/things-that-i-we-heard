@@ -172,18 +172,6 @@ const geojson = {
             type: 'Feature',
             geometry: {
                 type: 'Point',
-                coordinates: [135.75806632674124,35.00542582767942]
-            },
-            properties: {
-                title: '一応3日間ちょこちょこやろうかなと思うけど、オンデマンドで',
-                date: '2022-08-13  20:28',
-                address: '京都芸術センター'
-            }
-        },
-        {
-            type: 'Feature',
-            geometry: {
-                type: 'Point',
                 coordinates: [135.76685243417177,34.99898418379705]
             },
             properties: {
