@@ -259,7 +259,7 @@ const geojson = {
                 coordinates: [135.7691943126444,35.00254909259776]
             },
             properties: {
-                title: '「傘は？」「忘れた。もうええわ」',
+                title: '「傘は？」<br/>「忘れた。もうええわ」',
                 date: '2022-08-14  20:55',
                 address: 'GOOD NATURE STATION'
             }
@@ -307,7 +307,7 @@ const geojson = {
                 coordinates: [135.7694101582549,35.003703244156696]
             },
             properties: {
-                title: '「寺町ってあっち？」「わかれへん私覚えられへん」「OK調べるわ」',
+                title: '「寺町ってあっち？」<br/>「わかれへん私覚えられへん」<br/>「OK調べるわ」',
                 date: '2022-08-14  20:59',
                 address: '京都河原町ガーデン前'
             }
@@ -319,7 +319,7 @@ const geojson = {
                 coordinates: [135.76939635564105,35.003850221086765]
             },
             properties: {
-                title: '「YouTubeとか見て笑ってる。」「わかる。笑うよな」',
+                title: '「YouTubeとか見て笑ってる。」<br/>「わかる。笑うよな」',
                 date: '2022-08-14  21:00',
                 address: 'ディズニーストア 京都四条河原町店前'
             }
