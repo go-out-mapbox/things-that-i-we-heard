@@ -395,6 +395,42 @@ const geojson = {
                 date: '2022-08-14  21:36',
                 address: '鴨川沿いの遊歩道'
             }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76907575585352,35.00384615210797]
+            },
+            properties: {
+                title: 'マジでドンドンドンキ一緒に行く？',
+                date: '2022-08-14  21:36',
+                address: '四条河原町通交差点'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.7670441869874,35.00320520120307]
+            },
+            properties: {
+                title: '常にジェットコースター乗ってる感じやな',
+                date: '2022-08-14  21:08',
+                address: 'ファミリーマート 四条寺町店'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76688599105637,35.00309848700391]
+            },
+            properties: {
+                title: 'グラフで言うたら30パー程度ちゃう',
+                date: '2022-08-14  20:57',
+                address: '寺町通'
+            }
         }
     ]
 };
