@@ -199,7 +199,7 @@ const geojson = {
                 coordinates: [135.76714942359928,34.99608966347003]
             },
             properties: {
-                title: 'その',
+                title: 'その”うん”ってどういう意味なんやろ',
                 date: '2022-08-14  13:18',
                 address: '2éme MAISON'
             }
