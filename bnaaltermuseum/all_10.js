@@ -647,6 +647,18 @@ const geojson = {
                 date: '2022-08-15  14:39',
                 address: 'コロナビル前'
             }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76906294717782,35.0015100384681]
+            },
+            properties: {
+                title: 'この２つはあんまりオススメしないです～',
+                date: '2022-08-15  19:07',
+                address: 'モチコチキン専門店 LOCO CHICKEN'
+            }
         }
     ]
 };
