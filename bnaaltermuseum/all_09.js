@@ -419,6 +419,234 @@ const geojson = {
                 date: '2022-08-14  20:57',
                 address: '寺町通'
             }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76631373669824,34.99922107069672]
+            },
+            properties: {
+                title: 'すっごいイライラする毎日',
+                date: '2022-08-15  12:25',
+                address: '御幸町通'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76703891556002,34.99774453319523]
+            },
+            properties: {
+                title: 'お兄さんがいるの？',
+                date: '2022-08-15  12:31',
+                address: 'ドラッグひかり河原町寺町店前'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76699230620545,34.99902796425627]
+            },
+            properties: {
+                title: '俺と20年離れてる',
+                date: '2022-08-15  12:36',
+                address: '三井のリパーク 寺町松原駐車場'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76625715069844,35.000080485316275]
+            },
+            properties: {
+                title: 'はりきってさぁ、具合悪くなった',
+                date: '2022-08-15  12:23',
+                address: '汎洛前'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76683373338625,35.00041339191216]
+            },
+            properties: {
+                title: '何回言っても変わらへんから私が辞めた',
+                date: '2022-08-15  13:44',
+                address: 'シエリア京都四条河原町前'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76683638355325,35.000612083664194]
+            },
+            properties: {
+                title: 'おいでやす',
+                date: '2022-08-15  13:45',
+                address: 'フレスコ寺町店前'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76556561530037,35.001935370702384]
+            },
+            properties: {
+                title: '卒業するまでめっちゃ気にしてた',
+                date: '2022-08-15  13:49',
+                address: '新鮮激安市場！ 四条麩屋町店前'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76555246067392,35.00279792324103]
+            },
+            properties: {
+                title: '離れておくれやす',
+                date: '2022-08-15  13:51',
+                address: '総合打撃道佐竹道場前'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76492224886505,35.00362540052488]
+            },
+            properties: {
+                title: '今日は大丈夫まだ待ちだから',
+                date: '2022-08-15  13:54',
+                address: 'ドトールコーヒーショップ 京都四条通り店前'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76412302820415,35.003608349933]
+            },
+            properties: {
+                title: 'からあげもやけどアジとか魚もやばい',
+                date: '2022-08-15  13:55',
+                address: '京都信用金庫本店前'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76309889487385,35.00348745118896]
+            },
+            properties: {
+                title: 'レシート落ちましたよ',
+                date: '2022-08-15  14:03',
+                address: 'ウェンディーズ・ファーストキッチン 京都大丸前店'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.7619135354389,35.003616761625054]
+            },
+            properties: {
+                title: '来てからでもええやん',
+                date: '2022-08-15  14:19',
+                address: 'バス停 四条高倉'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.7610870139788,35.003577397910576]
+            },
+            properties: {
+                title: 'さあどっち行こっか',
+                date: '2022-08-15  14:22',
+                address: '悪王子社趾'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76215955501812,35.00385601654065]
+            },
+            properties: {
+                title: 'ロレックスは大丸の経営店舗',
+                date: '2022-08-15  14:27',
+                address: '大丸京都店'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76274588274543,35.00377756245271]
+            },
+            properties: {
+                title: 'ミスチルともう1人誰か',
+                date: '2022-08-15  14:29',
+                address: 'Apple 京都前'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76328741690764,35.00378656945088]
+            },
+            properties: {
+                title: '重みはメンズやけどレディース。ギラっとしてる',
+                date: '2022-08-15  14:32',
+                address: 'ココカラファイン 四条烏丸店前'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.7662810576935,35.00380062458066]
+            },
+            properties: {
+                title: 'あんたも一緒に誕生日プレゼント割る？',
+                date: '2022-08-15  14:36',
+                address: 'BAPE STORE® 京都前'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76686638596203,35.00380453358453]
+            },
+            properties: {
+                title: 'バスは嫌',
+                date: '2022-08-15  14:34',
+                address: '寺町京極商店街前'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.76692015764047,35.00355671508812]
+            },
+            properties: {
+                title: 'グンゼサブリナお買い得です',
+                date: '2022-08-15  14:39',
+                address: 'コロナビル前'
+            }
         }
     ]
 };
