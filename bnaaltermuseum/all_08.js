@@ -129,7 +129,7 @@ const geojson = {
             properties: {
                 title: 'そんなとこ止まらんときや～',
                 date: '2022-08-13  17:12',
-                address: '京都市下京区松川町'
+                address: 'デイリーヤマザキ 河原町松原店前'
             }
         },
         {
@@ -141,7 +141,7 @@ const geojson = {
             properties: {
                 title: 'ちょっと一瞬だけ待ってて',
                 date: '2022-08-13  20:31',
-                address: '京都市東山区東橋詰町'
+                address: '京都鴨川五条酒店 Trigger前'
             }
         },
         {
@@ -153,7 +153,7 @@ const geojson = {
             properties: {
                 title: 'ソルト？',
                 date: '2022-08-13  21:02',
-                address: '京都市下京区清水町'
+                address: 'アジェ 松原本店前'
             }
         },
         {
@@ -165,7 +165,7 @@ const geojson = {
             properties: {
                 title: '今日1日ありがとうございました',
                 date: '2022-08-13  20:26',
-                address: 'チカキッサ.タブコ'
+                address: 'チカキッサ.タブコ前'
             }
         },
         {
@@ -177,7 +177,7 @@ const geojson = {
             properties: {
                 title: 'ちょっと待ってここでちょっと調べるわ',
                 date: '2022-08-13  22:38',
-                address: '鉄板とお酒 宗や'
+                address: '鉄板とお酒 宗や前'
             }
         },
         {
@@ -295,7 +295,7 @@ const geojson = {
                 coordinates: [135.7694101582549,35.003703244156696]
             },
             properties: {
-                title: '「寺町ってあっち？」<br/>「わかれへん私覚えられへん」<br/>「OK調べるわ」',
+                title: '「寺町ってあっち？」<br/>「わからへん私覚えられへん」<br/>「OK調べるわ」',
                 date: '2022-08-14  20:59',
                 address: '京都河原町ガーデン前'
             }
