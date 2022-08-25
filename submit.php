@@ -44,8 +44,8 @@ if( !empty($_POST['btn_confirm']) ) {
 
 	// ヘッダー情報を設定
 	$header = "MIME-Version: 1.0\n";
-	$header .= "From: creative-community.space <pehu@creative-community.space>\n";
-	$header .= "Reply-To: creative-community.space <pehu@creative-community.space>\n";
+	$header .= "From: creative-community.space <we.are.pe.hu@gmail.com>\n";
+	$header .= "Reply-To: creative-community.space <we.are.pe.hu@gmail.com>\n";
 
 	// 件名を設定
 	$admin_reply_subject = 'Submit | things that i (we) heard';
@@ -73,7 +73,7 @@ if( !empty($_POST['btn_confirm']) ) {
         <meta name="viewport" content="width=device-width">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="icon" href="logo.png">
+        <link rel="icon" href="card.png">
         <link rel="stylesheet" href="form.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,13 +107,11 @@ if( !empty($_POST['btn_confirm']) ) {
                 background: #000 !important;
             }
             
-            .content a,
-            #credit a {
+            .content a {
                 color: #fff;
             }
             
-            .content a:hover,
-            #credit a:hover {
+            .content a:hover {
                 color: #000;
                 background: #fff !important;
             }
@@ -134,7 +132,6 @@ if( !empty($_POST['btn_confirm']) ) {
             }
             
             body,
-            #credit,
             #main input[type="text"],
             #main input[type="name"],
             #main input[type="url"],
@@ -149,10 +146,6 @@ if( !empty($_POST['btn_confirm']) ) {
     </head>
 
     <body>
-        <div id="credit">
-          <a href="#" onClick="history.back(); return false;" target="_parent">私（わたしたち）が聞いた言葉</a>
-          <a href="#" onClick="history.back(); return false;" target="_parent">↲</a>
-        </div>
 
         <div id="submit">
             <?php if( $page_flag === 1 ): ?>
@@ -203,17 +196,10 @@ if( !empty($_POST['btn_confirm']) ) {
             <div class="thankyou">
                 <h1>ご投稿ありがとうございました。</h1>
                 <p>近日中に、あなたが投稿した言葉をデジタル地図に追加します。</p>
-                <h1><a href="/members/map/heard/">things that i (we) heard</a></h1>
+                <h1><a href="/map/heard/">things that i (we) heard</a></h1>
             </div>
 
             <?php else: ?>
-
-            <footer>
-              <hr/>
-                <p>会員限定</p>
-                <h1><i>things that i (we) heard</i></h1>
-                <p>あなたがあなたの周りで聞いた言葉を投稿する</p>
-            </footer>
             <section id="main" class="form">
                 <form action="" method="post">
                     <div class="submit">
@@ -242,27 +228,8 @@ if( !empty($_POST['btn_confirm']) ) {
                     </div>
                 </form>
             </section>
-            <section id="content" style="padding-top: 0; border-bottom: 0; padding-bottom: 0;">
-                <details>
-                    <summary>
-                        <h2>特集</h2>
-                    </summary>
-                    <div class="content">
-                        <u>2020年春 - 2022年春</u>
-                        <h3>things that i (we) heard around OTO building</h3>
-                        <p><a href="https://creative-community.space/map/otobuilding/" target="_blank">私（わたしたち）が音ビルの周りで聞いた言葉</a></p>
-                <div id="membersonly"></div>
-                    </div>
-                </details>
-            </section>
             <?php endif; ?>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            $(function() {
-                $("#membersonly").load("/map/things/membersonly.html");
-            })
-        </script>
     </body>
 
     </html>

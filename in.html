@@ -184,6 +184,14 @@
         <hr/>
     </main>
     <main>
+        <details open>
+            <summary>
+                <h2>あなたがあなたの周りで聞いた言葉を投稿する</h2>
+            </summary>
+            <div class="content">
+                <div id="submit"></div>
+            </div>
+        </details>
         <details>
             <summary>
                 <h2>2022年8月13日(土) - 8月16日(火)</h2>
@@ -208,6 +216,16 @@
                 <p>
                     <a href="https://creative-community.space/map/heard/otobuilding/" target="_parent">creative-community.space/map/heard/otobuilding/</a>
                 </p>
+            </div>
+        </details>
+        <details>
+            <summary>
+                <h2>2022年6月6日(月)</h2>
+            </summary>
+            <div class="content">
+                <h3>私（わたしたち）が聞いた言葉</h3>
+                <p>みんなが聞いた言葉を集めるデジタル地図を制作しました。</p>
+                <h3><a href="https://creative-community.space/map/heard/" target="_parent">creative-community.space/map/heard</a></h3>
             </div>
         </details>
         <details>
@@ -280,11 +298,6 @@
                 <h2>以下のコンテンツの閲覧には会員登録（無料）が必要です。</h2>
             </summary>
             <div class="content">
-                <u>2022年6月6日(月)</u>
-                <h3>私（わたしたち）が聞いた言葉</h3>
-                <p>みんなが聞いた言葉を集める会員限定デジタル地図を制作しました。</p>
-                <h3><a href="https://creative-community.space/members/map/heard/" target="_parent">Members Only</a></h3>
-                <hr/>
                 <div id="membersonly"></div>
             </div>
         </details>
@@ -295,6 +308,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript">
             $(function() {
+                $("#submit").load("submit.php");
                 $("#membersonly").load("membersonly.html");
             })
         </script>
