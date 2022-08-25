@@ -7,22 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
 
-    <title>things that i (we) heard in ___</title>
+    <title>things that i (we) heard</title>
     <meta name="author" content="Sarah Marshall & ∧° ┐">
     <meta name="reply-to" content="we.are.pe.hu&#64;gmail.com">
     <meta name="description" content="私（わたしたち）が聞いた言葉">
 
-    <meta property="og:title" content="things that i (we) heard in ___" />
+    <meta property="og:title" content="things that i (we) heard" />
     <meta property="og:description" content="私（わたしたち）が聞いた言葉" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://creative-community.space/map/heard/" />
     <meta property="og:site_name" content="creative-community.space" />
-    <meta property="og:image" content="___" />
+    <meta property="og:image" content="https://creative-community.space/map/heard/card.png" />
     <meta property="og:locale" content="ja_JP" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@" />
-    <meta name="twitter:image" content="___" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@pe_hu_" />
+    <meta name="twitter:image" content="https://creative-community.space/map/heard/card.png" />
 
     <link rel="icon" href="https://creative-community.space/map/logo.png">
     <link rel="apple-touch-icon" href="https://creative-community.space/map/logo.png">
@@ -65,39 +65,22 @@
         #btn {
             color: #fff;
             font-family: 'Libre Baskerville', serif;
-            font-size: 10vw;
-            transition: all 1s ease-out;
             font-weight: 100;
             width: 85%;
-            overflow: hidden;
             position: absolute;
-            margin: 0;
-            padding: 0;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
-        
-        #btn:hover {
-            cursor: pointer;
-        }
-        
-        #box.none {
-            pointer-events: none;
-            user-select: none;
-            font-style: italic;
-        }
-        
-        .none #btn {
             font-size: 2rem;
-            position: absolute;
             margin: 0;
             padding: 1rem 2.5%;
             top: 0;
             left: 0;
             -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+        }
+        
+        #box.none {
+            pointer-events: none;
+            user-select: none;
+            font-style: italic;
         }
         
         .cc {
@@ -136,18 +119,7 @@
             cursor: pointer;
         }
         
-        @media screen and (max-width: 920px) {
-            #btn {
-                font-size: 10vw;
-                width: 90%;
-            }
-        }
-        
         @media screen and (max-width: 550px) {
-            #btn {
-                font-size: 3.5rem;
-                width: 90%;
-            }
             .none #btn {
                 font-size: 1.5rem;
             }
@@ -158,7 +130,7 @@
 <body>
     <p id="top_btn"><a class="cc" href="in.html">i</a></p>
     <div id="box">
-        <h1 id="btn">things that i (we) heard in ___</h1>
+        <h1 id="btn">things that i (we) heard</h1>
     </div>
     <div id="map"></div>
     <script>
@@ -173,14 +145,14 @@
             btnToggleclass(box);
         }, false);
     </script>
-    <script src='mapbox.js'></script>
+    <script src='map_v10.js'></script>
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
         var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8',
-            center: [135.47306292634534, 34.62458544610712],
-            zoom: 13.5
+            center: [135.50433479522678, 34.69699057458179],
+            zoom: 11.11
         });
 
         // add markers to map
@@ -199,6 +171,9 @@
                     .setHTML(
                         `<div>
                         <h3>${marker.properties.title}</h3>
+                        <p class="${marker.properties.link}">
+                          <a href="${marker.properties.url}" target="blank">もっと詳しく</a>
+                        </p>
                         <p class="date">${marker.properties.date}
                           </br>${marker.properties.address}</p>
                         </div>`
