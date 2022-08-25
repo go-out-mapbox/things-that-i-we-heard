@@ -80,11 +80,6 @@ if( !empty($_POST['btn_confirm']) ) {
         <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
         <title>Submit | things that i (we) heard</title>
         <style type="text/css">
-            body {
-                background: #CDCBCC;
-                color: #fff;
-                margin: 0;
-            }
             
             #main u {
                 background: #fff;
@@ -200,6 +195,12 @@ if( !empty($_POST['btn_confirm']) ) {
             </div>
 
             <?php else: ?>
+
+            <footer>
+              <hr/>
+                <h1><i>things that i (we) heard</i></h1>
+                <p>あなたがあなたの周りで聞いた言葉を投稿する</p>
+            </footer>
             <section id="main" class="form">
                 <form action="" method="post">
                     <div class="submit">
