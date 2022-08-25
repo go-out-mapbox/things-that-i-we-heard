@@ -251,7 +251,7 @@ if( !empty($_POST['btn_confirm']) ) {
             <?php endif; ?>
         </div>
         <p class="link">
-            <a href="/map/heard/" target="_parent>↩︎</a>
+            <a href="/map/heard/" target="_parent">↩︎</a>
         </p>
     </body>
 
