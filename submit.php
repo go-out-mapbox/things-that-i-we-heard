@@ -142,6 +142,19 @@ if( !empty($_POST['btn_confirm']) ) {
             #main textarea {
                 font-family: 'Libre Baskerville', "YuMincho", "Yu Mincho", "游明朝体", serif;
             }
+        
+        .link {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            font-size: 2.5rem;
+            margin: 1rem 2.5%;
+        }
+        
+        .link a {
+            text-decoration: none;
+            color: #fff;
+        }
         </style>
     </head>
 
@@ -237,6 +250,9 @@ if( !empty($_POST['btn_confirm']) ) {
             </section>
             <?php endif; ?>
         </div>
+        <p class="link">
+            <a href="#" onclick="window.history.back(); return false;">↩︎</a>
+        </p>
     </body>
 
     </html>
