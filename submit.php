@@ -201,6 +201,7 @@ if( !empty($_POST['btn_confirm']) ) {
                 <h1><i>things that i (we) heard</i></h1>
                 <p>あなたがあなたの周りで聞いた言葉を投稿する</p>
             </footer>
+            
             <section id="main" class="form">
                 <form action="" method="post">
                     <div class="submit">
