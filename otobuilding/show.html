@@ -166,6 +166,13 @@
             }
         }
     </style>
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/www/preview.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/www/scrollable.js"></script>
+
 </head>
 
 <body>
@@ -230,11 +237,53 @@
             </details>
             <hr/>
         </details>
-        <hr/>
-        <p class="link">
-            <a href="#" onclick="window.history.back(); return false;">↩︎</a>
-        </p>
-        </div>
+    </main>
+    <hr/>
+    <ul class="mousedragscrollable library">
+        <li>
+            <div class="contents">
+                <p class="center">
+                    <img src="https://64.media.tumblr.com/4431b033d22ad4b043d2c0da38abc39d/85399bf4a27084d8-fe/s1280x1920/e98418c299a3f363805e686592966c6f8a1e6185.jpg" width="100%">
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="contents">
+                <p class="center">
+                    <img src="https://64.media.tumblr.com/0ae277138ab25c681b74c24da526ab51/85399bf4a27084d8-94/s1280x1920/7a55218bea4af72ad3690ef08aeab646c9fb522a.jpg" width="100%">
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="contents">
+                <p class="center">
+                    <img src="https://64.media.tumblr.com/249662d79e4a56ad413942e9d0500a7f/85399bf4a27084d8-84/s1280x1920/df7c88cca16afd0b4360a120497a6db584d7f3a3.jpg" width="100%">
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="contents">
+                <p class="center">
+                    <img src="https://64.media.tumblr.com/029e14f400a4bd957e8502ecef301e66/85399bf4a27084d8-ae/s1280x1920/f2bfefa184583b8d13156a598d3a2cbb3af04eeb.jpg" width="100%">
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="contents">
+                <p class="center">
+                    <img src="https://64.media.tumblr.com/be63243b51ffb162375158547065cfdf/85399bf4a27084d8-d6/s1280x1920/721dc43f6b4fd199cb4c4c6d77f4530954ee20b8.jpg" width="100%">
+                </p>
+            </div>
+        </li>
+    </ul>
+    <p class="link">
+        <a href="#" onclick="window.history.back(); return false;">↩︎</a>
+    </p>   
+
+    <script>
+        $(".mousedragscrollable").mousedragscrollable();
+    </script>
+
 </body>
 
 </html>
